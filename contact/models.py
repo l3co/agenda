@@ -9,3 +9,6 @@ class Contact(models.Model):
     email = models.EmailField(blank=True)
     created_date = models.DateTimeField(auto_now_add=True)
     description = models.TextField(blank=True)
+
+    def __str__(self):
+        return f'{self.first_name} {self.last_name}'
